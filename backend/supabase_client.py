@@ -10,8 +10,3 @@ supabase = create_client(
 
 print("Supabase connected successfully!")
 
-# Test the resources table
-response = supabase.table("RESOURCES").select("*").execute()
-
-print("Resources data:")
-print(response.data)
