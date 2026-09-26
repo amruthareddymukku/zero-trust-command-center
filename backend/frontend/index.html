@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZeroTrust Command Center</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">ZT</div>
+
+            <div>
+                <h2>ZeroTrust</h2>
+                <span>COMMAND CENTER</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="#overview" class="nav-link active">
+                ◈ <span>Overview</span>
+            </a>
+
+            <a href="#agents" class="nav-link">
+                ◉ <span>AI Agents</span>
+            </a>
+
+            <a href="#resources" class="nav-link">
+                ▣ <span>Resources</span>
+            </a>
+
+            <a href="#policies" class="nav-link">
+                ⚙ <span>Policies</span>
+            </a>
+
+            <a href="#credentials" class="nav-link">
+                ◇ <span>Credentials</span>
+            </a>
+
+            <a href="#threats" class="nav-link">
+                ◌ <span>Threat Monitor</span>
+            </a>
+
+            <a href="#blast" class="nav-link">
+                ◫ <span>Blast Radius</span>
+            </a>
+
+            <a href="#audit" class="nav-link">
+                ☷ <span>Audit Logs</span>
+            </a>
+
+            <a href="#copilot" class="nav-link copilot-link">
+                ✦ <span>AI Copilot</span>
+            </a>
+
+        </nav>
+
+        <div class="system-box">
+
+            <span class="pulse"></span>
+
+            <div>
+                <strong>System Online</strong>
+                <small>Continuous monitoring active</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main" id="overview">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    SECURITY OPERATIONS
+                </p>
+
+                <h1>
+                    Authorization Command Center
+                </h1>
+
+            </div>
+
+            <div class="top-status">
+
+                <span class="live-dot"></span>
+
+                LIVE
+
+                <span id="clock">
+                    --:--:--
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ◉
+                </div>
+
+                <div>
+                    <span>ACTIVE AGENTS</span>
+                    <strong>24</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon warning">
+                    !
+                </div>
+
+                <div>
+                    <span>HIGH RISK</span>
+
+                    <strong id="highRiskCount">
+                        07
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon danger">
+                    ×
+                </div>
+
+                <div>
+                    <span>REVOKED</span>
+
+                    <strong id="revokedCount">
+                        03
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon safe">
+                    ✓
+                </div>
+
+                <div>
+                    <span>SECURITY SCORE</span>
+
+                    <strong>
+                        92%
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACCESS EVALUATION ================= -->
+
+        <section class="evaluation" id="access">
+
+            <div class="section-title">
+
+                <div>
+
+                    <p class="eyebrow">
+                        CONTINUOUS AUTHORIZATION
+                    </p>
+
+                    <h2>
+                        Evaluate Access Request
+                    </h2>
+
+                </div>
+
+                <span class="badge">
+                    CONTEXT AWARE
+                </span>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <!-- AGENT -->
+
+                <div class="input-group">
+
+                    <label>
+                        AI AGENT / SERVICE
+                    </label>
+
+                    <select id="agent">
+
+                        <option>InvoiceAgent</option>
+                        <option>PaymentAgent</option>
+                        <option>CustomerAgent</option>
+                        <option>SecurityAgent</option>
+                        <option>MonitoringAgent</option>
+                        <option>BackupAgent</option>
+                        <option>DevOpsAgent</option>
+                        <option>AnalyticsAgent</option>
+                        <option>RobotAgent</option>
+                        <option>DeveloperService</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- RESOURCE -->
+
+                <div class="input-group">
+
+                    <label>
+                        TARGET RESOURCE
+                    </label>
+
+                    <select id="resource">
+
+                        <option>Invoice Database</option>
+                        <option>Customer Database</option>
+                        <option>Payment Database</option>
+                        <option>User Database</option>
+                        <option>Employee Database</option>
+                        <option>Transaction Database</option>
+                        <option>Cloud Storage</option>
+                        <option>API Gateway</option>
+                        <option>Production Server</option>
+                        <option>Backup Server</option>
+                        <option>Kubernetes Cluster</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DEVICE -->
+
+                <div class="input-group">
+
+                    <label>
+                        DEVICE STATE
+                    </label>
+
+                    <select id="device">
+
+                        <option>Trusted</option>
+                        <option>Unknown</option>
+                        <option>Compromised</option>
+                        <option>Unregistered</option>
+                        <option>Non-Compliant</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- NETWORK -->
+
+                <div class="input-group">
+
+                    <label>
+                        NETWORK SIGNAL
+                    </label>
+
+                    <select id="network">
+
+                        <option>Normal</option>
+                        <option>Suspicious</option>
+                        <option>VPN</option>
+                        <option>Unknown Network</option>
+                        <option>High Risk Network</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BEHAVIOUR -->
+
+                <div class="input-group">
+
+                    <label>
+                        HISTORICAL BEHAVIOUR
+                    </label>
+
+                    <select id="behaviour">
+
+                        <option>Normal</option>
+                        <option>Abnormal</option>
+                        <option>Unusual Access Pattern</option>
+                        <option>Rapid Requests</option>
+                        <option>Privilege Escalation Attempt</option>
+                        <option>Data Exfiltration Pattern</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TASK -->
+
+                <div class="input-group">
+
+                    <label>
+                        TASK CONTEXT
+                    </label>
+
+                    <select id="task">
+
+                        <option>Normal</option>
+                        <option>Unusual</option>
+                        <option>High Privilege Task</option>
+                        <option>Bulk Data Access</option>
+                        <option>Administrative Task</option>
+                        <option>Critical Operation</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ACCESS -->
+
+                <div class="input-group">
+
+                    <label>
+                        ACCESS LEVEL
+                    </label>
+
+                    <select id="accessLevel">
+
+                        <option>READ</option>
+                        <option>WRITE</option>
+                        <option>EXECUTE</option>
+                        <option>ADMIN</option>
+                        <option>FULL ACCESS</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="evaluate-btn"
+                onclick="evaluateAccess()">
+
+                ⚡ EVALUATE ACCESS
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section class="results">
+
+
+            <!-- RISK -->
+
+            <div class="result-card">
+
+                <div class="result-heading">
+                    RISK SCORE
+                </div>
+
+                <div
+                    class="risk-number"
+                    id="riskScore">
+
+                    --
+
+                </div>
+
+                <div class="risk-bar">
+
+                    <div id="riskBar"></div>
+
+                </div>
+
+                <small>
+                    Contextual risk assessment
+                </small>
+
+            </div>
+
+
+            <!-- DECISION -->
+
+            <div class="result-card">
+
+                <div class="result-heading">
+                    ACCESS DECISION
+                </div>
+
+                <div
+                    id="decision"
+                    class="decision">
+
+                    WAITING
+
+                </div>
+
+                <p id="decisionText">
+                    Awaiting access request
+                </p>
+
+            </div>
+
+
+            <!-- CREDENTIAL -->
+
+            <div class="result-card">
+
+                <div class="result-heading">
+                    CREDENTIAL
+                </div>
+
+                <div
+                    id="credential"
+                    class="credential">
+
+                    NOT ISSUED
+
+                </div>
+
+                <p>
+                    Short-lived credential
+                </p>
+
+            </div>
+
+
+            <!-- BLAST -->
+
+            <div class="result-card">
+
+                <div class="result-heading">
+                    BLAST RADIUS
+                </div>
+
+                <div
+                    id="blastRadius"
+                    class="blast">
+
+                    UNKNOWN
+
+                </div>
+
+                <p id="isolationText">
+                    No isolation required
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DETAILED RESULT ================= -->
+
+        <section class="lower-grid">
+
+
+            <!-- SECURITY CONTEXT -->
+
+            <div
+                class="panel"
+                id="agents">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            IDENTITY TELEMETRY
+                        </p>
+
+                        <h2>
+                            Security Context
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="context-list">
+
+
+                    <div class="context-item">
+
+                        <span>
+                            Identity
+                        </span>
+
+                        <strong id="identityStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="context-item">
+
+                        <span>
+                            Device
+                        </span>
+
+                        <strong id="deviceStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="context-item">
+
+                        <span>
+                            Behaviour
+                        </span>
+
+                        <strong id="behaviourStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="context-item">
+
+                        <span>
+                            Network
+                        </span>
+
+                        <strong id="networkStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="context-item">
+
+                        <span>
+                            Access Level
+                        </span>
+
+                        <strong id="accessStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="context-item">
+
+                        <span>
+                            Resource
+                        </span>
+
+                        <strong id="resourceStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <!-- NEW -->
+
+                    <div class="context-item">
+
+                        <span>
+                            Risk Level
+                        </span>
+
+                        <strong id="riskLevel">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="context-item">
+
+                        <span>
+                            Permission
+                        </span>
+
+                        <strong id="permissionStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECURITY ACTIVITY -->
+
+            <div
+                class="panel"
+                id="threats">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            REAL-TIME EVENTS
+                        </p>
+
+                        <h2>
+                            Security Activity
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="event">
+
+                        <span class="event-dot green"></span>
+
+                        <div>
+
+                            <strong>
+                                SecurityAgent
+                            </strong>
+
+                            <p>
+                                Access allowed
+                            </p>
+
+                        </div>
+
+                        <time>
+                            14:21
+                        </time>
+
+                    </div>
+
+
+                    <div class="event">
+
+                        <span class="event-dot yellow"></span>
+
+                        <div>
+
+                            <strong>
+                                RobotAgent
+                            </strong>
+
+                            <p>
+                                Privilege restriction
+                            </p>
+
+                        </div>
+
+                        <time>
+                            14:19
+                        </time>
+
+                    </div>
+
+
+                    <div class="event">
+
+                        <span class="event-dot red"></span>
+
+                        <div>
+
+                            <strong>
+                                PaymentAgent
+                            </strong>
+
+                            <p>
+                                Credential revoked
+                            </p>
+
+                        </div>
+
+                        <time>
+                            14:17
+                        </time>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AI SECURITY ANALYSIS ================= -->
+
+        <section class="dashboard-section">
+
+            <div class="panel">
+
+                <p class="eyebrow">
+                    INTELLIGENT DECISION ANALYSIS
+                </p>
+
+                <h2>
+                    AI Security Explanation
+                </h2>
+
+                <div class="security-analysis">
+
+                    <div class="analysis-row">
+
+                        <span>
+                            Risk Level
+                        </span>
+
+                        <strong id="riskLevel">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analysis-row">
+
+                        <span>
+                            Decision
+                        </span>
+
+                        <strong id="analysisDecision">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analysis-row">
+
+                        <span>
+                            Permission
+                        </span>
+
+                        <strong id="permissionStatus">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analysis-row">
+
+                        <span>
+                            Isolation Strategy
+                        </span>
+
+                        <strong id="isolationStrategy">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="analysis-row">
+
+                        <span>
+                            Affected Resources
+                        </span>
+
+                        <strong id="affectedResources">
+                            None
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ai-explanation">
+
+                    <div class="copilot-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Security Reasoning
+                        </strong>
+
+                        <p id="securityExplanation">
+                            Evaluate an access request to generate
+                            a contextual security explanation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESOURCES ================= -->
+
+        <section
+            class="dashboard-section"
+            id="resources">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        RESOURCE CONTROL
+                    </p>
+
+                    <h2>
+                        Protected Resources
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="resource-grid">
+
+
+                <div class="resource-card">
+
+                    <h3>
+                        Payment Database
+                    </h3>
+
+                    <p>
+                        Critical financial data
+                    </p>
+
+                    <button
+                        onclick="openResource('Payment Database')">
+
+                        OPEN RESOURCE
+
+                    </button>
+
+                </div>
+
+
+                <div class="resource-card">
+
+                    <h3>
+                        Customer Database
+                    </h3>
+
+                    <p>
+                        Customer information
+                    </p>
+
+                    <button
+                        onclick="openResource('Customer Database')">
+
+                        OPEN RESOURCE
+
+                    </button>
+
+                </div>
+
+
+                <div class="resource-card">
+
+                    <h3>
+                        Cloud Storage
+                    </h3>
+
+                    <p>
+                        Cloud files and objects
+                    </p>
+
+                    <button
+                        onclick="openResource('Cloud Storage')">
+
+                        OPEN RESOURCE
+
+                    </button>
+
+                </div>
+
+
+                <div class="resource-card">
+
+                    <h3>
+                        Production Server
+                    </h3>
+
+                    <p>
+                        Critical infrastructure
+                    </p>
+
+                    <button
+                        onclick="openResource('Production Server')">
+
+                        OPEN RESOURCE
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= POLICIES ================= -->
+
+        <section
+            class="dashboard-section"
+            id="policies">
+
+            <div class="panel">
+
+                <p class="eyebrow">
+                    POLICY ENGINE
+                </p>
+
+                <h2>
+                    Dynamic Authorization Policies
+                </h2>
+
+                <div class="policy-list">
+
+                    <div>
+                        <strong>
+                            Short-lived credentials
+                        </strong>
+
+                        <span>
+                            ACTIVE
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Continuous risk evaluation
+                        </strong>
+
+                        <span>
+                            ACTIVE
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Privilege reduction
+                        </strong>
+
+                        <span>
+                            ACTIVE
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Automatic revocation
+                        </strong>
+
+                        <span>
+                            ACTIVE
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CREDENTIALS ================= -->
+
+        <section
+            class="dashboard-section"
+            id="credentials">
+
+            <div class="panel">
+
+                <p class="eyebrow">
+                    IDENTITY CREDENTIALS
+                </p>
+
+                <h2>
+                    Short-Lived Credentials
+                </h2>
+
+                <div class="credential-table">
+
+                    <div>
+                        PaymentAgent
+                        <span>
+                            ACTIVE • 5 MIN
+                        </span>
+                    </div>
+
+                    <div>
+                        SecurityAgent
+                        <span>
+                            ACTIVE • 5 MIN
+                        </span>
+                    </div>
+
+                    <div>
+                        RobotAgent
+                        <span>
+                            LIMITED • 2 MIN
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BLAST RADIUS ================= -->
+
+        <section
+            class="dashboard-section"
+            id="blast">
+
+            <div class="panel">
+
+                <p class="eyebrow">
+                    COMPROMISE ANALYSIS
+                </p>
+
+                <h2>
+                    Blast Radius Analysis
+                </h2>
+
+                <div class="blast-box">
+
+                    <strong>
+                        Current Identity Exposure
+                    </strong>
+
+                    <p id="blastExplanation">
+                        The platform calculates affected resources,
+                        privilege level and isolation requirements.
+                    </p>
+
+                    <div class="blast-high">
+                        HIGH RISK IDENTITIES → ISOLATE
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AUDIT ================= -->
+
+        <section
+            class="dashboard-section"
+            id="audit">
+
+            <div class="panel">
+
+                <p class="eyebrow">
+                    SECURITY HISTORY
+                </p>
+
+                <h2>
+                    Audit Logs
+                </h2>
+
+                <div
+                    class="audit-log"
+                    id="auditLog">
+
+                    <p>
+                        ✓ PaymentAgent → Payment Database → ALLOW
+                    </p>
+
+                    <p>
+                        ⚠ RobotAgent → Production Server → RESTRICT
+                    </p>
+
+                    <p>
+                        ✕ UnknownAgent → Customer Database → REVOKE
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AI COPILOT ================= -->
+
+        <section
+            class="dashboard-section"
+            id="copilot">
+
+            <div class="copilot-panel">
+
+                <div class="copilot-header">
+
+                    <div class="copilot-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <p class="eyebrow">
+                            AI SECURITY ASSISTANT
+                        </p>
+
+                        <h2>
+                            ZeroTrust AI Copilot
+                        </h2>
+
+                        <p>
+                            Ask about access, risk or resources.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="copilot-chat"
+                    id="copilotChat">
+
+                    <div class="bot-message">
+
+                        <strong>
+                            AI Copilot
+                        </strong>
+
+                        <p>
+                            Hello! I can analyze access requests,
+                            risk, resources and authorization.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="copilot-input">
+
+                    <input
+                        id="copilotInput"
+                        type="text"
+                        placeholder="Ask about access or risk...">
+
+                    <button
+                        onclick="askCopilot()">
+
+                        ASK AI
+
+                    </button>
+
+                </div>
+
+
+                <div class="copilot-actions">
+
+                    <button
+                        <button type="button" onclick="openEvaluateAccess()">
+                          
+                        ⚡ EVALUATE ACCESS
+
+                    </button>
+
+                    <button
+                        <button type="button" onclick="openAnalyzeRisk()">
+    
+
+                        🔍 ANALYZE RISK
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <span>
+                ZERO-TRUST AUTHORIZATION FABRIC
+            </span>
+
+            <span>
+                ● ALL SYSTEMS OPERATIONAL
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
